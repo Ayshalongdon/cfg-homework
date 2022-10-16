@@ -21,7 +21,7 @@ class Student:
         self.subjects = {}
 
     def student_details(self):
-        return print(f"Student name is{self.name}, age is {self.age}, ID is {self.id}.")
+        return print(f"Student name is {self.name}, age is {self.age}, ID is {self.id}.")
 
     def add_subject(self, subject, grade):
         self.subjects.update({subject: grade})
@@ -43,10 +43,20 @@ class Student:
         return average_marks
 
 
-cfg_student = Student
+class CFGStudent(Student):
+    def __init__(self, name, age, id, specialisation):
+        super().__init__(name, age, id)
+        self.specialisation = specialisation
 
-cfg_student.student_details('Aysha', 25, 'ABC')
+
+
+cfg_student = Student('Aysha', 25, 1402)
+
+cfg_student.student_details()
 cfg_student.add_subject('Software', 99)
+cfg_student.add_subject('Data', 88)
+cfg_student.view_subjects()
+
 
 # class CFGStudent(<should inherit from Student>)
 #     create new methods that manage student's subjects (add/remove new subject and its grade to the dict)
