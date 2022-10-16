@@ -56,6 +56,8 @@ cfg_student.student_details()
 cfg_student.add_subject('Software', 99)
 cfg_student.add_subject('Data', 88)
 cfg_student.view_subjects()
+cfg_student.remove_subjects('Data')
+cfg_student.view_subjects()
 
 
 # class CFGStudent(<should inherit from Student>)
